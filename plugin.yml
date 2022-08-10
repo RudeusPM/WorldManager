@@ -1,0 +1,15 @@
+name: WorldManager
+main: WorldManager\MainClass
+src-namespace-prefix: WorldManager
+version: 1.0.0
+api: 5.0.0
+
+load: STARTUP
+
+commands:
+  worldmanager:
+    permission: server.admin
+
+permissions:
+  server.admin:
+    default: true
