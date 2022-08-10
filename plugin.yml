@@ -7,7 +7,7 @@ api: 5.0.0
 load: STARTUP
 
 commands:
-  worldmanager:
+  world:
     permission: server.admin
 
 permissions:
