@@ -18,7 +18,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+<div align="center">
+  <a href="https://github.com/RudeusPM/WorldManager">
+    <img src="images/screenshot.jpg" alt="Logo" width="150" height="150">
+  </a>
+</div>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
