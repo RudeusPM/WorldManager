@@ -20,7 +20,7 @@
 
 <div align="center">
   <a href="https://github.com/RudeusPM/WorldManager">
-    <img src="images/screenshot.jpg" alt="Logo" width="150" height="150">
+    <img src="images/screenshot.jpg" alt="Logo">
   </a>
 </div>
 
