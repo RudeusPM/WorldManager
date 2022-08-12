@@ -132,7 +132,7 @@ class WManager
         $worlds = glob("{$path}/*", GLOB_ONLYDIR);
 
         $player->sendMessage("§8[§cWorldManager§8] §7Welten Liste");
-        foreach ($worlds as $world){
+        foreach ($worlds as $world) {
             $player->sendMessage("§7- §e$world");
         }
     }
