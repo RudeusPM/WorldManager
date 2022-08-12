@@ -17,13 +17,13 @@
 
 ## Funktionen
 
-- [] Welt Generator
-- [] Welt entfernen
-- [] Welt umbenennen
-- [] Standard Welt einstellen
-- [] Weltteleportation
-- [] Welten auflisten
-- [] Beim Start ALLE Welten laden
+- Welt Generator
+- Welt entfernen
+- Welt umbenennen
+- Standard Welt einstellen
+- Weltteleportation
+- Welten auflisten
+- Beim Start ALLE Welten laden
 
 ## Commands
 
