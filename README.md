@@ -42,9 +42,8 @@ Für die Nutzung von WorldManager benötigst du PocketMine 5.0, forks von Pocket
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
-## License
+## Credits
 
-Logo by Flaticon.
+<a href="https://www.flaticon.com/free-icons/world" title="world icons">World icons created by Freepik - Flaticon</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
