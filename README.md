@@ -16,7 +16,7 @@
 </div>
 
 <!-- ABOUT THE PROJECT -->
-## Über das Projekt
+## Commands
 
 <div align="center">
   <a href="https://github.com/RudeusPM/WorldManager">
