@@ -16,7 +16,7 @@
 </div>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Über das Projekt
 
 <div align="center">
   <a href="https://github.com/RudeusPM/WorldManager">
@@ -26,11 +26,6 @@
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-Für die Nutzung von WorldManager benötigst du PocketMine 5.0, forks von PocketMine werden nicht Unterstützt sowie PocketMine 4.0!
 
 <!-- ROADMAP -->
 ## TODO
