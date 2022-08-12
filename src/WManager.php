@@ -6,7 +6,9 @@ namespace WorldManager;
 
 use pocketmine\player\Player;
 use pocketmine\world\generator\GeneratorManager;
+use pocketmine\world\World;
 use pocketmine\world\WorldCreationOptions;
+use WorldManager\command\WMCommand;
 use WorldManager\generator\void\VoidGenerator;
 
 /**
@@ -60,10 +62,10 @@ class WManager
 
     public function delete(Player $player, string $world): void
     {
-        if ($this->plugin->getServer()->getWorldManager()->isWorldGenerated($world) and file_exists($this->plugin->getServer()->getDataPath() . "wolrds/{$world}")) {
+        if (file_exists($this->plugin->getServer()->getDataPath() . "worlds/{$world}")) {
             $level = $this->plugin->getServer()->getWorldManager()->getWorldByName($world);
-            if ($this->plugin->getServer()->getWorldManager()->getDefaultWorld() !== $level) {
-                if ($level->isLoaded()) {
+            if ($this->plugin->getServer()->getWorldManager()->getDefaultWorld()->getFolderName() !== $world) {
+                if ($level instanceof World) {
                     $players = $level->getPlayers();
                     if (count($players) > 0) {
                         foreach ($players as $player) {
@@ -74,8 +76,9 @@ class WManager
                     $this->plugin->getServer()->getWorldManager()->unloadWorld($level);
                 }
                 $this->removeDir($world);
+                $player->sendMessage("§8[§cWorldManager§8] §7Die Welt {$world} wurde gelöscht!");
             } else {
-                $player->sendMessage("8[§cWorldManager§8] §7Die Welt {$world} ist die Default World, eine Änderung ist nicht möglich");
+                $player->sendMessage("§8[§cWorldManager§8] §7Die Welt {$world} ist die Default World, eine Änderung ist nicht möglich");
             }
         } else {
             $player->sendMessage("§8[§cWorldManager§8] §7Die Welt {$world} gibt es nicht!");
@@ -122,14 +125,16 @@ class WManager
         }
     }
 
-    public function getAllWorlds(): string
+
+    public function getAllWorlds(Player $player): void
     {
         $path = $this->plugin->getServer()->getDataPath() . "worlds";
         $worlds = glob("{$path}/*", GLOB_ONLYDIR);
-        foreach ($worlds as $world) {
-            return $world;
+
+        $player->sendMessage("§8[§cWorldManager§8] §7Welten Liste");
+        foreach ($worlds as $world){
+            $player->sendMessage("§7- §e$world");
         }
-        return "error";
     }
 
     public function loadAllWorlds(): void
@@ -151,6 +156,7 @@ class WManager
 
     public function registerCommands(): void
     {
-
+        $command = new WMCommand($this->plugin);
+        $this->plugin->getServer()->getCommandMap()->register("WorldManager", $command);
     }
 }

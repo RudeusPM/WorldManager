@@ -13,5 +13,6 @@ class MainClass extends PluginBase
         $manager = new WManager($this);
         $manager->registerWorldGenerator();
         $manager->loadAllWorlds();
+        $manager->registerCommands();
     }
 }

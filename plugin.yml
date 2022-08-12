@@ -6,10 +6,6 @@ api: 5.0.0
 
 load: STARTUP
 
-commands:
-  world:
-    permission: server.admin
-
 permissions:
   server.admin:
     default: true
